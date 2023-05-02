@@ -9,8 +9,8 @@ const MenuItems = () => {
         <List>
             {/*<Typography variant="overline" ml={2}>Tilgang</Typography>*/}
             {menuItem?.map((menuItem) => (
-                <li>
-                    <ListItemButton key={menuItem.title}>
+                <li key={menuItem.title}>
+                    <ListItemButton>
                         <ListItemIcon>
                             <Icon>{menuItem.icon}</Icon>
                         </ListItemIcon>
