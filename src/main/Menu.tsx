@@ -1,26 +1,12 @@
-import {
-    Box,
-    Drawer,
-    Theme,
-    Toolbar,
-} from "@mui/material";
-import {createStyles, makeStyles} from "@mui/styles";
+import {Box, Drawer, Toolbar,} from "@mui/material";
 import MenuItems from './MenuItems';
-
-const drawerWidth = 240;
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        drawer: {
-            width: drawerWidth,
-            [`& .MuiDrawer-paper`]: {width: drawerWidth}
-        },
-    }));
+import style from "../template/style";
 
 function Menu() {
-    const classes = useStyles();
+
     return (
         <Box>
-            <Drawer variant="permanent" className={classes.drawer}>
+            <Drawer variant="permanent" sx={style.drawer}>
                 <Toolbar/>
                 <MenuItems/>
             </Drawer>
