@@ -10,7 +10,7 @@ const MenuItems = () => {
             {/*<Typography variant="overline" ml={2}>Tilgang</Typography>*/}
             {menuItem?.map((menuItem) => (
                 <li key={menuItem.title}>
-                    <ListItemButton>
+                    <ListItemButton href={menuItem.path}>
                         <ListItemIcon>
                             <Icon>{menuItem.icon}</Icon>
                         </ListItemIcon>
