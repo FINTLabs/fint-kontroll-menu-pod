@@ -10,3 +10,4 @@ spec:
     enabled: true
     port: "7100"
     path: /metrics
+  env: []
