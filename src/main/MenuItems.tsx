@@ -1,9 +1,22 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {MenuContext} from "../context/menuContext";
 import {Icon, List, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
+import { MessageBus } from '@podium/browser';
 
 const MenuItems = () => {
     const {menuItem} = useContext(MenuContext);
+
+    const messageBus = new MessageBus();
+    const [username, setUsername] = useState<string>('');
+
+    messageBus.subscribe(
+        'testChannel',
+        'testTopic',
+        (event) => {
+            const user = event.payload;
+            setUsername(user as string);
+        }
+    )
 
     return (
         <List>
@@ -20,7 +33,7 @@ const MenuItems = () => {
                     </ListItemButton>
                 </li>
             ))}
-            <li>-Test</li>
+            <li>Test: {username}</li>
         </List>
     );
 };
