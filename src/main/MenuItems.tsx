@@ -33,7 +33,7 @@ const MenuItems = () => {
                     </ListItemButton>
                 </li>
             ))}
-            <li>Test: {username}</li>
+            <li>{username}</li>
         </List>
     );
 };
