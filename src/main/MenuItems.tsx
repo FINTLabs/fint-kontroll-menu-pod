@@ -14,7 +14,7 @@ const MenuItems = () => {
                         <ListItemIcon>
                             <Icon>{menuItem.icon}</Icon>
                         </ListItemIcon>
-                        <ListItemText>
+                        <ListItemText className="menu-title">
                             {menuItem.title}
                         </ListItemText>
                     </ListItemButton>
